@@ -67,6 +67,6 @@ if streamlit.button("Get fruit load list"):
 
 fruit_choice_2 = streamlit.text_input('What fruit would you like to add?','Jackfruit')
 streamlit.write('Thanks for entering ', fruit_choice_2)
-streamlit.stop()
 
-insert_row_snowflake(fruit_choice_2, my_cnx)
+if streamlit.button("Add fruit"):
+    insert_row_snowflake(fruit_choice_2, my_cnx)
